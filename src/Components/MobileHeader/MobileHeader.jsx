@@ -30,27 +30,73 @@ import {
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { FaBagShopping, FaCouch } from "react-icons/fa6";
 import { TbDog } from "react-icons/tb";
-import "./Header.css";
+import { IoMdClose } from "react-icons/io";
+import { useState } from "react";
+import "./MobileHeader.css";
 
-function Header() {
+function MobileHeader() {
+  const [click, setClick] = useState(false);
+
   return (
-    <header className="header">
-      <div className="logo-cont">
-        <p className="logo">shoppers hub</p>
+    <header className="mobile-header">
+      <div className="mobile-logo-cont">
+        <p className="mobile-logo">shoppers hub</p>
         <BiSolidShoppingBags />
       </div>
-      <form action="" className="header-form">
+      <form action="" className="mobile-header-form">
         <input type="text" placeholder="search for products" />
         <button>
           <FaSearch />
         </button>
       </form>
 
-      <div className="header-menus">
-        <div className="header-menu categories">
-          <GiHamburgerMenu />
-          <p className="menu-label">categories</p>
-          <div className="categories-menu">
+      <div className="mobile-header-col3">
+        <div className="mobile-hamburger-menu">
+          {click ? (
+            <IoMdClose
+              onClick={() => {
+                setClick(!click);
+              }}
+            />
+          ) : (
+            <GiHamburgerMenu
+              onClick={() => {
+                setClick(!click);
+              }}
+            />
+          )}
+        </div>
+
+        <a href="#">
+          <HiOutlineShoppingCart />
+          <div className="mobile-cart-label">2</div>
+        </a>
+      </div>
+
+      {click && (
+        <div className="mobile-categories-account-menu">
+          <div className="mobile-account-menu">
+            <p className="hamburger-menu-title">account</p>
+            <a href="">
+              <CiLogin />
+              <p>sign in</p>
+            </a>
+            <a href="">
+              <MdAccountCircle />
+              <p>my account</p>
+            </a>
+            <a href="">
+              <FiPackage />
+              <p>orders</p>
+            </a>
+            <a href="">
+              <FaHeart />
+              <p>wishlist</p>
+            </a>
+          </div>
+
+          <div className="mobile-categories-menu">
+            <p className="hamburger-menu-title">categories</p>
             <a href="">
               <GiWatch />
               <p>accessories</p>
@@ -145,38 +191,9 @@ function Header() {
             </a>
           </div>
         </div>
-
-        <div className="header-menu account">
-          <MdAccountCircle />
-          <p className="menu-label">account</p>
-          <div className="account-menu">
-            <a href="">
-              <CiLogin />
-              <p>sign in</p>
-            </a>
-            <a href="">
-              <MdAccountCircle />
-              <p>my account</p>
-            </a>
-            <a href="">
-              <FiPackage />
-              <p>orders</p>
-            </a>
-            <a href="">
-              <FaHeart />
-              <p>wishlist</p>
-            </a>
-          </div>
-        </div>
-
-        <div className="header-menu">
-          <HiOutlineShoppingCart />
-          <p className="menu-label">cart</p>
-          <div className="cart-label">2</div>
-        </div>
-      </div>
+      )}
     </header>
   );
 }
 
-export default Header;
+export default MobileHeader;
