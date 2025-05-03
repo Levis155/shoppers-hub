@@ -2,7 +2,9 @@
   --primary-font:"Nunito Sans", sans-serif;
   --primary-color: rgb(210, 105, 30);
   --white-color: white;
-  --black-color: black;}
+  --black-color: black;
+  --light-gray-variant1: rgb(233, 227, 227);
+}
 
 * {
   margin: 0;
