@@ -3,7 +3,8 @@
   --primary-color: rgb(210, 105, 30);
   --white-color: white;
   --black-color: black;
-  --light-gray-variant1: rgb(233, 227, 227);
+  --light-gray-variant1: rgb(230, 223, 220);
+  --light-gray-variant2: rgb(243, 236, 232);
 }
 
 * {

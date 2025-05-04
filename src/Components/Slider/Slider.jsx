@@ -1,5 +1,24 @@
 import React, { useState } from "react";
+import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import "./Slider.css";
+import phonesAndTelecommunicationsSrc from  "../../assets/phones-and-telecommunications-removebg-preview.png";
+import mensFashionSrc from "../../assets/mens-fashion.png";
+import homeAppliancesSrc from "../../assets/home-appliances.png"
+import accessoriesSrc from "../../assets/accessories.png";
+import jewelrySrc from "../../assets/jewelry.png";
+import consumerElectronicsSrc from "../../assets/consumer-electronics.png";
+import homeImprovementSrc from "../../assets/home-improvement-and-lighting.png";
+import hairEssentialsSrc from "../../assets/hair-essentials.png";
+import automotiveAndMotorcycleSrc from "../../assets/automotive-and-motorcycle.png";
+import luggagesAndBagsSrc from "../../assets/luggages-and-bags.png";
+import ShoesSrc from "../../assets/shoes.png";
+import womenFashionSrc from "../../assets/women-fashion.png";
+import sportsAndEntertainmentSrc from "../../assets/sports-and-entertainment.png";
+import toysAndGamesSrc from "../../assets/toys-and-games.png";
+import beautyAndHealthSrc from "../../assets/beauty-and-health.png";
+import toolsAndIndustrySrc from "../../assets/tools-and-industry.png";
+import furnitureSrc from "../../assets/furniture.png";
+import petSuppliesSrc from "../../assets/pet-supplies.png";
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -7,28 +26,28 @@ const SliderComponent = () => {
 
   const slides = [
     [
-      { text: "Nature", image: "https://picsum.photos/id/1015/400/300" },
-      { text: "Mountains", image: "https://picsum.photos/id/1003/400/300" },
-      { text: "Ocean", image: "https://picsum.photos/id/1025/400/300" },
-      { text: "Forest", image: "https://picsum.photos/id/1040/400/300" },
-      { text: "City", image: "https://picsum.photos/id/1031/400/300" },
-      { text: "Desert", image: "https://picsum.photos/id/1050/400/300" },
+      { text: "phones & telecommunications", image: phonesAndTelecommunicationsSrc },
+      { text: "home appliances", image: homeAppliancesSrc },
+      { text: "accessories", image: accessoriesSrc },
+      { text: "jewelry", image: jewelrySrc },
+      { text: "consumer electronics", image: consumerElectronicsSrc },
+      { text: "home improvement & lighting", image: homeImprovementSrc },
     ],
     [
-      { text: "Dog", image: "https://picsum.photos/id/237/400/300" },
-      { text: "Cat", image: "https://picsum.photos/id/593/400/300" },
-      { text: "Horse", image: "https://picsum.photos/id/284/400/300" },
-      { text: "Parrot", image: "https://picsum.photos/id/1062/400/300" },
-      { text: "Panda", image: "https://picsum.photos/id/1084/400/300" },
-      { text: "Tiger", image: "https://picsum.photos/id/1074/400/300" },
+      { text: "hair essentials", image: hairEssentialsSrc },
+      { text: "automotive & motorcycle", image: automotiveAndMotorcycleSrc },
+      { text: "luggages & bags", image: luggagesAndBagsSrc },
+      { text: "shoes", image: ShoesSrc },
+      { text: "men's clothing", image: mensFashionSrc },
+      { text: "women's clothing", image: womenFashionSrc },
     ],
     [
-      { text: "Sunset", image: "https://picsum.photos/id/1000/400/300" },
-      { text: "Aurora", image: "https://picsum.photos/id/1016/400/300" },
-      { text: "Canyon", image: "https://picsum.photos/id/1041/400/300" },
-      { text: "Lake", image: "https://picsum.photos/id/1018/400/300" },
-      { text: "Snow", image: "https://picsum.photos/id/1036/400/300" },
-      { text: "Rain", image: "https://picsum.photos/id/1022/400/300" },
+      { text: "sports & entertainment", image: sportsAndEntertainmentSrc },
+      { text: "toys & games", image: toysAndGamesSrc },
+      { text: "beauty & health", image: beautyAndHealthSrc },
+      { text: "tools & industries", image: toolsAndIndustrySrc },
+      { text: "furniture", image: furnitureSrc },
+      { text: "pet supplies", image: petSuppliesSrc },
     ],
   ];
 
@@ -53,11 +72,11 @@ const SliderComponent = () => {
                 <div
                   key={i}
                   className="slide-item"
-                  style={{
-                    backgroundImage: `url(${item.image})`,
-                  }}
                 >
-                  <div className="slide-text">{item.text}</div>
+                  <div className="slide-image-wrapper">
+                    <img src={item.image} alt="" />
+                  </div>
+                  <p className="slide-text">{item.text}</p>
                 </div>
               ))}
             </div>
@@ -66,10 +85,10 @@ const SliderComponent = () => {
       </div>
 
       <button onClick={prevSlide} className="arrow left">
-        ◀
+      <FaChevronLeft />
       </button>
       <button onClick={nextSlide} className="arrow right">
-        ▶
+      <FaChevronRight />
       </button>
 
       <div className="dots">

@@ -51,6 +51,14 @@ function Header() {
           <GiHamburgerMenu />
           <p className="menu-label">categories</p>
           <div className="categories-menu">
+          <a href="">
+              <IoPhonePortraitOutline />
+              <p>phones & telecommunications</p>
+            </a>
+            <a href="">
+              <FaBlender />
+              <p>home appliances</p>
+            </a>
             <a href="">
               <GiWatch />
               <p>accessories</p>
@@ -68,24 +76,12 @@ function Header() {
               <p>home improvement & lighting</p>
             </a>
             <a href="">
-              <IoPhonePortraitOutline />
-              <p>phones & telecommunications</p>
-            </a>
-            <a href="">
-              <GiGardeningShears />
-              <p>home & garden</p>
-            </a>
-            <a href="">
               <PiHairDryerFill />
               <p>hair essentials</p>
             </a>
             <a href="">
               <FaCar />
               <p>automotive & motorcycle</p>
-            </a>
-            <a href="">
-              <FaBlender />
-              <p>home appliances</p>
             </a>
             <a href="">
               <FaBagShopping />
@@ -112,26 +108,6 @@ function Header() {
               <p>toys & games</p>
             </a>
             <a href="">
-              <PiBabyDuotone />
-              <p>babies & kids</p>
-            </a>
-            <a href="">
-              <CiDesktopMouse1 />
-              <p>computer, office & education</p>
-            </a>
-            <a href="">
-              <FaCouch />
-              <p>furniture</p>
-            </a>
-            <a href="">
-              <TbDog />
-              <p>pet supplies</p>
-            </a>
-            <a href="">
-              <GiCctvCamera />
-              <p>security & protection</p>
-            </a>
-            <a href="">
               <GiLipstick />
               <p>beauty & health</p>
             </a>
@@ -140,8 +116,12 @@ function Header() {
               <p>tools & industrial</p>
             </a>
             <a href="">
-              <CiDesktopMouse1 />
-              <p>lingerie & lounge-wear</p>
+              <FaCouch />
+              <p>furniture</p>
+            </a>
+            <a href="">
+              <TbDog />
+              <p>pet supplies</p>
             </a>
           </div>
         </div>
