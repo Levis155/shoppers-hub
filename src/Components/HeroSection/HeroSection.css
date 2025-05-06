@@ -93,7 +93,6 @@
   font-weight: 800;
   text-align: center;
   text-transform: capitalize;
-  color: var(--primary-color);
 }
 @media screen and (max-width: 68.75em) {
   .feature-products-group-title {
@@ -157,7 +156,7 @@
 }
 .featured-products-group-div-price {
   height: 30%;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   text-transform: uppercase;
 }
