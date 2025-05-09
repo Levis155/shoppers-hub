@@ -4,6 +4,7 @@ import HeroSection from "../Components/HeroSection/HeroSection"
 import CategoriesSection from "../Components/CategorySection/CategoriesSection"
 import AllProductsSection from "../Components/AllProductsSection/AllProductsSection"
 
+
 function Home() {
   return (
     <div>
