@@ -130,7 +130,6 @@
   width: 5rem;
   height: 5rem;
   cursor: pointer;
-  /* background-color: var(--light-gray-variant2); */
 }
 .variations-card-clicked {
   border: 1px solid var(--primary-color);
