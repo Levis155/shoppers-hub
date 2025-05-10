@@ -20,18 +20,78 @@ const variationImages = [
   "src/assets/white-jbls.png",
 ];
 const similarProductsDetails = [
-  {image:"src/assets/jbl-live.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/blue-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/gold-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/white-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/jbl-live.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/blue-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/gold-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/white-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/jbl-live.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/blue-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/gold-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
-  {image:"src/assets/white-jbls.png", headline: "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery", price: "ksh 1998"},
+  {
+    image: "src/assets/jbl-live.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/blue-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/gold-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/white-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/jbl-live.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/blue-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/gold-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/white-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/jbl-live.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/blue-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/gold-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
+  {
+    image: "src/assets/white-jbls.png",
+    headline:
+      "Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure Bass,Foldable, Long-Lasting Battery",
+    price: "ksh 1998",
+  },
 ];
 
 function ProductPage() {
@@ -235,21 +295,40 @@ function SimilarProductsSlider() {
       <Swiper
         modules={[Navigation]}
         navigation
-        slidesPerView={5}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+          },
+          480: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
         spaceBetween={10}
       >
         {similarProductsDetails.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="products-page-similar-items-card">
-              <div className="products-page-similar-items-card-img">
-              <img
-              src={item.image}
-              alt={`img-${index}`}
-            />
+              <div className="products-page-similar-items-card-img-wrapper">
+                <div className="products-page-similar-items-card-img">
+                  <img src={item.image} alt={`img-${index}`} />
+                </div>
               </div>
-            <p className="product-page-similar-items-card-headline">{item.headline}</p>
+              <p className="product-page-similar-items-card-headline">
+                {item.headline}
+              </p>
 
-              <p className="product-page-similar-items-card-price">{item.price}</p>
+              <p className="product-page-similar-items-card-price">
+                {item.price}
+              </p>
             </div>
           </SwiperSlide>
         ))}

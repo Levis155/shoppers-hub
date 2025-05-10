@@ -1,5 +1,10 @@
 .mobile-header {
-  position: relative;
+  position:fixed;
+    left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background-color: var(--white-color);
   display: none;
   padding-inline: 1rem;
   height: 12vh;
