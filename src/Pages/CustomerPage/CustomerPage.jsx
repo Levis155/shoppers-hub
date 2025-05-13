@@ -1,11 +1,32 @@
 import "./CustomerPage.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
+import regionTownMap from "../../../data/regionTownMap";
+import { generatePickupStations } from "../../../utils/generatePickupStations";
 import { NavLink, Link } from "react-router-dom";
 import { FaRegUser, FaRegHeart, FaRegEdit } from "react-icons/fa";
 import { LuPackage } from "react-icons/lu";
 import { MdOutlineRateReview } from "react-icons/md";
-import { TextField } from "@mui/material";
+import { useState } from "react";
+import {
+  TextField,
+  MenuItem,
+  Select,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
+
+const formControlStyle = {
+  "& .MuiInputBase-root": {
+    fontSize: "1.4rem",
+  },
+  "& .MuiInputLabel-root": {
+    fontSize: "1.4rem",
+  },
+  "& .MuiInputLabel-shrink": {
+    fontSize: "1.1rem",
+  },
+};
 
 function CustomerPage() {
   return (
@@ -31,6 +52,7 @@ function CustomerPage() {
         <div className="customer-page-col2">
           <AccountDetails />
           <EditAccountDetails />
+          <EditShippingAddress />
         </div>
       </div>
     </>
@@ -96,7 +118,6 @@ function EditAccountDetails() {
           label="First Name"
           variant="outlined"
           sx={{
-            marginBottom: 2,
             "& .MuiInputBase-input": {
               fontSize: "1.6rem", // Input text size
             },
@@ -110,7 +131,6 @@ function EditAccountDetails() {
           label="Last Name"
           variant="outlined"
           sx={{
-            marginBottom: 2,
             "& .MuiInputBase-input": {
               fontSize: "1.6rem",
             },
@@ -124,7 +144,6 @@ function EditAccountDetails() {
           label="Email Address"
           variant="outlined"
           sx={{
-            marginBottom: 2,
             "& .MuiInputBase-input": {
               fontSize: "1.6rem",
             },
@@ -138,7 +157,6 @@ function EditAccountDetails() {
           label="Phone Number"
           variant="outlined"
           sx={{
-            marginBottom: 2,
             "& .MuiInputBase-input": {
               fontSize: "1.6rem",
             },
@@ -149,9 +167,87 @@ function EditAccountDetails() {
         />
       </div>
       <div>
-        <button className="save-account-details-btn">
-          save
-        </button>
+        <button className="save-account-details-btn">save</button>
+      </div>
+    </div>
+  );
+}
+
+function EditShippingAddress() {
+  const [region, setRegion] = useState("Nairobi");
+  const [town, setTown] = useState("CBD");
+  const [pickupStation, setPickupStation] = useState("CBD Pickup Station 1");
+
+  const handleRegionChange = (e) => {
+    setRegion(e.target.value);
+    setTown("");
+    setPickupStation("");
+  };
+
+  const handleTownChange = (e) => {
+    setTown(e.target.value);
+    setPickupStation("");
+  };
+
+  const handlePickupStationChange = (e) => {
+    setPickupStation(e.target.value);
+  };
+
+  return (
+    <div className="edit-shipping-address-section">
+      <p className="edit-shipping-address-title">edit your shipping address</p>
+
+      <div className="edit-shipping-address-body">
+        <FormControl sx={formControlStyle}>
+          <InputLabel id="region-label">Region</InputLabel>
+          <Select
+            labelId="region-label"
+            id="region-select"
+            value={region}
+            label="Region"
+            onChange={handleRegionChange}
+          >
+            {Object.keys(regionTownMap).map((regionName) => (
+              <MenuItem key={regionName} value={regionName}>
+                {regionName}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
+        <FormControl fullWidth sx={formControlStyle} disabled={!region}>
+          <InputLabel id="town-label">Town</InputLabel>
+          <Select
+            labelId="town-label"
+            id="town-select"
+            value={town}
+            label="Town"
+            onChange={handleTownChange}
+          >
+            {(regionTownMap[region] || []).map((townName) => (
+              <MenuItem key={townName} value={townName}>
+                {townName}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
+
+        <FormControl fullWidth sx={formControlStyle} disabled={!town}>
+          <InputLabel id="pickup-label">Pickup Station</InputLabel>
+          <Select
+            labelId="pickup-label"
+            id="pickup-select"
+            value={pickupStation}
+            label="Pickup Station"
+            onChange={handlePickupStationChange}
+          >
+            {generatePickupStations(town).map((station) => (
+              <MenuItem key={station} value={station}>
+                {station}
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
       </div>
     </div>
   );

@@ -61,7 +61,7 @@
   gap: 1rem;
 }
 .my-account-section-title,
-.edit-account-details-title {
+.edit-account-details-title, .edit-shipping-address-title {
   padding: 0.4rem 1rem;
   border-bottom: 1px solid var(--light-gray-variant2);
   font-size: 2rem;
@@ -127,14 +127,17 @@
   text-transform: capitalize;
   color: var(--primary-color);
 }
-.edit-account-details-body {
-  padding: 1rem;
+.edit-account-details-section{
+    display: none;
+}
+.edit-account-details-body, .edit-shipping-address-body {
+  padding: 1.5rem 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem 2rem;
 }
 @media screen and (max-width: 43.75em) {
-  .edit-account-details-body {
+  .edit-account-details-body, .edit-shipping-address-body {
     grid-template-columns: 1fr;
   }
 }
