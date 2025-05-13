@@ -102,34 +102,34 @@ function CheckoutPage() {
           </div>
         </div>
         <div className="checkout-page-col2">
-            <div className="order-summary-title">
-              <p>order summary</p>
+          <div className="order-summary-title">
+            <p>order summary</p>
+          </div>
+
+          <div className="order-summary-body">
+            <div className="order-summary-items-total">
+              <p className="order-summary-items-total-label">
+                item's total (2):
+              </p>
+              <p className="order-summary-items-total-figure">ksh 3996</p>
             </div>
 
-            <div className="order-summary-body">
-              <div className="order-summary-items-total">
-                <p className="order-summary-items-total-label">
-                  item's total (2):
-                </p>
-                <p className="order-summary-items-total-figure">ksh 3996</p>
-              </div>
-
-              <div className="order-summary-delivery-fees">
-                <p className="order-summary-delivery-fees-label">
-                  delivery fees:
-                </p>
-                <p className="order-summary-delivery-fees-figure">ksh 120</p>
-              </div>
-
-              <div className="order-summary-total">
-                <p className="order-summary-total-label">total:</p>
-                <p className="order-summary-total-figure">ksh 4116</p>
-              </div>
-
-              <button className="place-order-btn">place order</button>
+            <div className="order-summary-delivery-fees">
+              <p className="order-summary-delivery-fees-label">
+                delivery fees:
+              </p>
+              <p className="order-summary-delivery-fees-figure">ksh 120</p>
             </div>
+
+            <div className="order-summary-total">
+              <p className="order-summary-total-label">total:</p>
+              <p className="order-summary-total-figure">ksh 4116</p>
+            </div>
+
+            <button className="place-order-btn">place order</button>
           </div>
         </div>
+      </div>
     </>
   );
 }

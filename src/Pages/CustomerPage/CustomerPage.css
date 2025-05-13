@@ -1,0 +1,128 @@
+.customer-page-wrapper {
+  margin-top: 12vh;
+  display: flex;
+  gap: 1rem;
+  padding: 4rem;
+  min-height: 80vh;
+}
+@media screen and (max-width: 56.25em) {
+  .customer-page-wrapper {
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 50em) {
+  .customer-page-wrapper  {
+    gap: 0;
+    padding-left: 0;
+  }
+}
+.customer-page-nav {
+    background-color: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 25%;
+}
+@media screen and (max-width: 50em) {
+  .customer-page-nav  {
+    width: fit-content;
+    background-color: inherit;
+  }
+}
+.customer-page-nav a {
+  padding: 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+.customer-page-nav a svg {
+  font-size: 2rem;
+}
+@media screen and (max-width: 50em) {
+  .customer-page-nav a p {
+    display: none;
+  }
+}
+.customer-page-col2 {
+  background-color: var(--white-color);
+  width: 75%;
+}
+@media screen and (max-width: 50em) {
+  .customer-page-col2  {
+    flex: 1;
+  }
+}
+.my-account-section{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.my-account-section-title {
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid var(--light-gray-variant2);
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.my-account-section-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  padding: 1rem;
+}
+@media screen and (max-width: 56.25em) {
+  .my-account-section-body {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+  }
+}
+.account-details,
+.shipping-address {
+  border: 1px solid rgb(182, 181, 181);
+}
+.account-details-title,
+.shipping-address-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid var(--light-gray-variant2);
+}
+.account-details-title p,
+.shipping-address-title p {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.account-details-title a,
+.shipping-address-title a {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+.account-details-body,
+.shipping-address-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.account-details-body p,
+.shipping-address-body p{
+    font-size: 1.3rem;
+    color: gray;
+}
+.change-password-link{
+    margin-left: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    text-transform: capitalize;
+    color: var(--primary-color);
+}
