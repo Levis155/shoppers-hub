@@ -1,6 +1,7 @@
 :root {
   --primary-font:"Nunito Sans", sans-serif;
   --primary-color: rgb(210, 105, 30);
+  --primary-color-light: rgb(250, 214, 188);
   --white-color: white;
   --black-color: black;
   --light-gray-variant1: rgb(230, 223, 220);

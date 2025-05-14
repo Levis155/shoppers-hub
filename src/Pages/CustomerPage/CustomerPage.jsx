@@ -64,6 +64,7 @@ function CustomerPage() {
           <OrderedProducts />
           <ReviewProducts />
           <RateAndReviewForm />
+          <Wishlist />
         </div>
       </div>
     </>
@@ -456,7 +457,7 @@ function RateAndReviewForm() {
   const [value, setValue] = useState(0);
 
   return (
-    <form action="">
+    <form className="rate-and-review-form" action="">
       <p className="rate-and-review-form-title">rate & review</p>
 
       <div className="rate-and-review-form-body">
@@ -544,6 +545,52 @@ function RateAndReviewForm() {
         <button className="submit-review-btn">submit you review</button>
       </div>
     </form>
+  );
+}
+
+function Wishlist() {
+  return (
+    <div className="wishlist-section">
+      <p className="wishlist-section-title">wishlist(2)</p>
+
+      <div className="wishlist-section-body">
+        <WishlistCard />
+        <WishlistCard />
+        <WishlistCard />
+        <WishlistCard />
+      </div>
+    </div>
+  );
+}
+
+function WishlistCard() {
+  return (
+    <div className="wishlist-section-card">
+      <div className="wishlist-card-col1">
+        <div className="wishlist-card-img">
+          <img src="src\assets\jbl-live.png" alt="" />
+        </div>
+      </div>
+
+      <div className="wishlist-card-col2">
+        <p className="wishlist-card-product-headline">
+          Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure
+          Bass,Foldable, Long-Lasting Battery
+        </p>
+
+        <p className="wishlist-card-price">ksh 1998</p>
+
+        <div className="wishlist-card-discount">
+          <p className="wishlist-card-original-price">ksh 1500</p>
+          <p className="wishlist-card-percent-discount">-25%</p>
+        </div>
+      </div>
+
+      <div className="wishlist-card-col3">
+        <button className="wishlist-card-remove-btn">remove</button>
+        <button className="wishlist-card-add-btn">add to cart</button>
+      </div>
+    </div>
   );
 }
 
