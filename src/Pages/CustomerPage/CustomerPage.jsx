@@ -61,6 +61,7 @@ function CustomerPage() {
           <EditShippingAddress />
           <EditPassword />
           <OrderedProducts />
+          <ReviewProducts />
         </div>
       </div>
     </>
@@ -387,30 +388,66 @@ function OrderedProducts() {
   );
 }
 
-function OrderedProduct () {
-  return(
-            <div className="ordered-product-card">
-          <div className="ordered-product-img">
-            <img src="src\assets\jbl-live.png" alt="" />
-          </div>
-          <div className="ordered-product-details">
-            <p className="ordered-product-headline">
-              Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure
-              Bass,Foldable, Long-Lasting Battery
-            </p>
-            <p className="ordered-product-quantity">qty: 1</p>
-            <p className="ordered-product-items-total">items total: ksh 1998</p>
-            <p className="ordered-product-delivery-date">
-              delivered on: 14 May 2025
-            </p>
-            <p className="ordered-product-pickup-station">
-              pickup station: Skyveshop Nyeri Station - Hamwa building Gakere rd
-              Opposite Naivas Smkt, Next to hass petrol station
-            </p>
-          </div>
-        </div>
-  )
+function OrderedProduct() {
+  return (
+    <div className="ordered-product-card">
+      <div className="ordered-product-img">
+        <img src="src\assets\jbl-live.png" alt="" />
+      </div>
+      <div className="ordered-product-details">
+        <p className="ordered-product-headline">
+          Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure
+          Bass,Foldable, Long-Lasting Battery
+        </p>
+        <p className="ordered-product-quantity">qty: 1</p>
+        <p className="ordered-product-items-total">items total: ksh 1998</p>
+        <p className="ordered-product-delivery-date">
+          delivered on: 14 May 2025
+        </p>
+        <p className="ordered-product-pickup-station">
+          pickup station: Skyveshop Nyeri Station - Hamwa building Gakere rd
+          Opposite Naivas Smkt, Next to hass petrol station
+        </p>
+      </div>
+    </div>
+  );
 }
 
+function ReviewProducts() {
+  return (
+    <div className="review-products-section">
+      <p className="review-products-section-title">pending reviews (4)</p>
+
+      <div className="review-products-section-body">
+        <ProductToReview />
+        <ProductToReview />
+        <ProductToReview />
+        <ProductToReview />
+      </div>
+    </div>
+  );
+}
+
+function ProductToReview() {
+  return (
+    <div className="product-to-review-card">
+      <div className="product-to-review-img">
+        <div className="product-to-review-img-wrapper">
+          <img src="src\assets\jbl-live.png" alt="" />
+        </div>
+      </div>
+      <div className="product-to-review-details">
+        <p className="product-to-review-headline">
+          Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure
+          Bass,Foldable, Long-Lasting Battery
+        </p>
+      </div>
+
+      <div className="product-to-review-link">
+        <Link>rate this product</Link>
+      </div>
+    </div>
+  );
+}
 
 export default CustomerPage;
