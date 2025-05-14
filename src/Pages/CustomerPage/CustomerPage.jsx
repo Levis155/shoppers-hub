@@ -8,13 +8,19 @@ import { FaRegUser, FaRegHeart, FaRegEdit } from "react-icons/fa";
 import { LuPackage } from "react-icons/lu";
 import { MdOutlineRateReview } from "react-icons/md";
 import { useState } from "react";
+import * as React from "react";
 import {
   TextField,
   MenuItem,
   Select,
   InputLabel,
   FormControl,
+  IconButton,
+  OutlinedInput,
+  InputAdornment,
 } from "@mui/material";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const formControlStyle = {
   "& .MuiInputBase-root": {
@@ -24,7 +30,7 @@ const formControlStyle = {
     fontSize: "1.4rem",
   },
   "& .MuiInputLabel-shrink": {
-    fontSize: "1.1rem",
+    fontSize: "1.3rem",
   },
 };
 
@@ -53,6 +59,7 @@ function CustomerPage() {
           <AccountDetails />
           <EditAccountDetails />
           <EditShippingAddress />
+          <EditPassword />
         </div>
       </div>
     </>
@@ -112,7 +119,7 @@ function EditAccountDetails() {
     <div className="edit-account-details-section">
       <p className="edit-account-details-title">edit your account details</p>
 
-      <div className="edit-account-details-body">
+      <form className="edit-account-details-body">
         <TextField
           id="outlined-basic-1"
           label="First Name"
@@ -165,10 +172,11 @@ function EditAccountDetails() {
             },
           }}
         />
-      </div>
-      <div>
+
+              <div>
         <button className="save-account-details-btn">save</button>
       </div>
+      </form>
     </div>
   );
 }
@@ -197,7 +205,7 @@ function EditShippingAddress() {
     <div className="edit-shipping-address-section">
       <p className="edit-shipping-address-title">edit your shipping address</p>
 
-      <div className="edit-shipping-address-body">
+      <form className="edit-shipping-address-body">
         <FormControl sx={formControlStyle}>
           <InputLabel id="region-label">Region</InputLabel>
           <Select
@@ -248,9 +256,118 @@ function EditShippingAddress() {
             ))}
           </Select>
         </FormControl>
-      </div>
+
+        <div>
+          <button className="save-shipping-address-btn">save</button>
+        </div>
+      </form>
     </div>
   );
 }
 
+function EditPassword() {
+  const [showPassword, setShowPassword] = React.useState(false);
+
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const handleMouseUpPassword = (event) => {
+    event.preventDefault();
+  };
+
+  return (
+    <div className="edit-password-section">
+      <p className="edit-password-title">change your password</p>
+
+      <form className="edit-password-body">
+        <FormControl variant="outlined" sx={formControlStyle}>
+          <InputLabel htmlFor="outlined-adornment-password">
+            Old Password
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label={
+                    showPassword ? "hide the password" : "display the password"
+                  }
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  onMouseUp={handleMouseUpPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
+
+        <FormControl variant="outlined" sx={formControlStyle}>
+          <InputLabel htmlFor="outlined-adornment-password">
+            New Password
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label={
+                    showPassword ? "hide the password" : "display the password"
+                  }
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  onMouseUp={handleMouseUpPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
+
+        <FormControl variant="outlined" sx={formControlStyle}>
+          <InputLabel htmlFor="outlined-adornment-password">
+            Confirm Password
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            type={showPassword ? "text" : "password"}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label={
+                    showPassword ? "hide the password" : "display the password"
+                  }
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  onMouseUp={handleMouseUpPassword}
+                  edge="end"
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
+
+        <div>
+          <div>
+            <button className="save-new-pass-btn">save</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+}
 export default CustomerPage;
