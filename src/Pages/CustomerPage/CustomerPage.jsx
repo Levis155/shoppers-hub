@@ -60,6 +60,7 @@ function CustomerPage() {
           <EditAccountDetails />
           <EditShippingAddress />
           <EditPassword />
+          <OrderedProducts />
         </div>
       </div>
     </>
@@ -173,9 +174,9 @@ function EditAccountDetails() {
           }}
         />
 
-              <div>
-        <button className="save-account-details-btn">save</button>
-      </div>
+        <div>
+          <button className="save-account-details-btn">save</button>
+        </div>
       </form>
     </div>
   );
@@ -370,4 +371,46 @@ function EditPassword() {
     </div>
   );
 }
+
+function OrderedProducts() {
+  return (
+    <div className="ordered-products-section">
+      <p className="ordered-products-section-title">ordered products</p>
+
+      <div className="ordered-products-section-body">
+        <OrderedProduct />
+        <OrderedProduct />
+        <OrderedProduct />
+        <OrderedProduct />
+      </div>
+    </div>
+  );
+}
+
+function OrderedProduct () {
+  return(
+            <div className="ordered-product-card">
+          <div className="ordered-product-img">
+            <img src="src\assets\jbl-live.png" alt="" />
+          </div>
+          <div className="ordered-product-details">
+            <p className="ordered-product-headline">
+              Jbl Tune 520 Wireless Over-Ear Bluetooth Headphones, Pure
+              Bass,Foldable, Long-Lasting Battery
+            </p>
+            <p className="ordered-product-quantity">qty: 1</p>
+            <p className="ordered-product-items-total">items total: ksh 1998</p>
+            <p className="ordered-product-delivery-date">
+              delivered on: 14 May 2025
+            </p>
+            <p className="ordered-product-pickup-station">
+              pickup station: Skyveshop Nyeri Station - Hamwa building Gakere rd
+              Opposite Naivas Smkt, Next to hass petrol station
+            </p>
+          </div>
+        </div>
+  )
+}
+
+
 export default CustomerPage;
