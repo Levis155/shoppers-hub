@@ -1,96 +1,142 @@
 import "./HeroSection.css";
 import shoeImg from "../../assets/shoe.jpg";
-import earbudsImg from "../../assets/earbuds.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 function HeroSection() {
   return (
     <section className="hero-section">
       <div className="hero-wrapper">
         <div className="stats-grid">
-          <div className="stat-cont">
-            <p className="stat-title">20000+</p>
-            <p className="stat-text">verified suppliers worldwide</p>
-          </div>
-
-          <div className="stat-cont">
-            <p className="stat-title">4.9 / 5</p>
-            <p className="stat-text">average customer satisfaction</p>
-          </div>
-
-          <div className="stat-cont">
-            <p className="stat-title">10m+</p>
-            <p className="stat-text">products delivered anually</p>
-          </div>
-
-          <div className="stat-cont">
-            <p className="stat-title">24h</p>
-            <p className="stat-text">personalized sourcing service</p>
-          </div>
+          <Stat
+            statTitle={"20000+"}
+            statText={"verified suppliers worldwide"}
+          />
+          <Stat
+            statTitle={"4.9 / 5"}
+            statText={"average customer satisfaction"}
+          />
+          <Stat statTitle={"10m+"} statText={"products delivered anually"} />
+          <Stat statTitle={"24h"} statText={"personalized sourcing service"} />
         </div>
 
         <div className="featured-products">
-          <div className="featured-products-group">
-            <p className="feature-products-group-title">buy in bulk</p>
+          <div className="featured-products-category">
+            <div className="featured-products-category-title">save big</div>
 
-            <div className="featured-products-group-divs">
-              <div className="featured-products-group-div">
-                <div className="featured-products-group-div-img">
-                  <img src={shoeImg} alt="" />
-                </div>
-                <p className="featured-products-group-div-price">kes 1700.00</p>
-              </div>
-
-              <div className="featured-products-group-div div2">
-                <div className="featured-products-group-div-img">
-                  <img src={earbudsImg} alt="" />
-                </div>
-                <p className="featured-products-group-div-price">kes 1350.00</p>
-              </div>
+            <div className="featured-products-category-body">
+              <FeaturedProduct />
+              <FeaturedProduct />
             </div>
           </div>
 
-          <div className="featured-products-group">
-            <p className="feature-products-group-title">popular products</p>
+          <div className="featured-products-category">
+            <div className="featured-products-category-title">hot products</div>
 
-            <div className="featured-products-group-divs">
-              <div className="featured-products-group-div">
-                <div className="featured-products-group-div-img">
-                  <img src={shoeImg} alt="" />
-                </div>
-                <p className="featured-products-group-div-price">kes 1700.00</p>
-              </div>
-
-              <div className="featured-products-group-div div2">
-                <div className="featured-products-group-div-img">
-                  <img src={earbudsImg} alt="" />
-                </div>
-                <p className="featured-products-group-div-price">kes 1350.00</p>
-              </div>
+            <div className="featured-products-category-body">
+              <FeaturedProduct />
+              <FeaturedProduct />
             </div>
           </div>
 
-          <div className="featured-products-group">
-            <p className="feature-products-group-title">fast delivery</p>
+          <div className="featured-products-category">
+            <div className="featured-products-category-title">
+              highest rated
+            </div>
 
-            <div className="featured-products-group-divs">
-              <div className="featured-products-group-div">
-                <div className="featured-products-group-div-img">
-                  <img src={shoeImg} alt="" />
-                </div>
-                <p className="featured-products-group-div-price">kes 1700.00</p>
-              </div>
-
-              <div className="featured-products-group-div div2">
-                <div className="featured-products-group-div-img">
-                  <img src={earbudsImg} alt="" />
-                </div>
-                <p className="featured-products-group-div-price">kes 1350.00</p>
-              </div>
+            <div className="featured-products-category-body">
+              <FeaturedProduct />
+              <FeaturedProduct />
             </div>
           </div>
         </div>
+
+        <Swiper
+          className="featured-products-hidden"
+          modules={[Navigation, Autoplay, Pagination]}
+          pagination={{ clickable: true }}
+          navigation
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            600: {
+              slidesPerView: 2,
+            },
+          }}
+          spaceBetween={10}
+        >
+          <SwiperSlide>
+            <div className="featured-products-category">
+              <div className="featured-products-category-title">save big</div>
+
+              <div className="featured-products-category-body">
+                <FeaturedProduct />
+                <FeaturedProduct />
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="featured-products-category">
+              <div className="featured-products-category-title">
+                hot products
+              </div>
+
+              <div className="featured-products-category-body">
+                <FeaturedProduct />
+                <FeaturedProduct />
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="featured-products-category">
+              <div className="featured-products-category-title">
+                highest rated
+              </div>
+
+              <div className="featured-products-category-body">
+                <FeaturedProduct />
+                <FeaturedProduct />
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
+  );
+}
+
+function Stat({ statTitle, statText }) {
+  return (
+    <div className="stat-cont">
+      <p className="stat-title">{statTitle}</p>
+      <p className="stat-text">{statText}</p>
+    </div>
+  );
+}
+
+function FeaturedProduct() {
+  return (
+    <div className="featured-product">
+      <div className="featured-product-img">
+        <img src={shoeImg} alt="" />
+      </div>
+
+      <p className="featured-product-price">ksh 1700</p>
+
+      <div className="featured-product-discount">
+        <p className="featured-product-discounted-figure">ksh 2500</p>
+        <p className="featured-product-percentage-discount">-32%</p>
+      </div>
+    </div>
   );
 }
 

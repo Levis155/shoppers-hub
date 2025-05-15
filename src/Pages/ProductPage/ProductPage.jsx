@@ -293,6 +293,7 @@ function SimilarProductsSlider() {
     <div className="product-page-similar-items">
       <p className="product-page-similar-items-title">Related products</p>
       <Swiper
+        className="similar-products-swiper"
         modules={[Navigation]}
         navigation
         breakpoints={{
