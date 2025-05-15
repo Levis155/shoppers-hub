@@ -2,6 +2,7 @@
   margin-top: 12vh;
   padding: 4rem;
   height: 82vh;
+  background-color: var(--white-color);
 }
 @media screen and (max-width: 68.75em) {
   .hero-section {

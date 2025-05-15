@@ -1,0 +1,27 @@
+.edit-shipping-address-title{
+  padding: 0.4rem 1rem;
+  border-bottom: 1px solid var(--light-gray-variant2);
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.edit-shipping-address-body {
+  padding: 1.5rem 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 2rem;
+}
+@media screen and (max-width: 43.75em) {
+  .edit-shipping-address-body {
+    grid-template-columns: 1fr;
+  }
+}
+.save-shipping-address-btn {
+  margin-left: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  text-transform: capitalize;
+  border: none;
+  cursor: pointer;
+}
