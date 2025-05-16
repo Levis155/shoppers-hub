@@ -22,6 +22,7 @@
   font-size: 2.4rem;
   gap: 1rem;
   padding-right: 1rem;
+  color: var(--black-color);
 }
 @media screen and (max-width: 33.75em) {
   .mobile-logo-cont {

@@ -53,62 +53,64 @@ function HeroSection() {
           </div>
         </div>
 
-        <Swiper
-          className="featured-products-hidden"
-          modules={[Navigation, Autoplay, Pagination]}
-          pagination={{ clickable: true }}
-          navigation
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            600: {
-              slidesPerView: 2,
-            },
-          }}
-          spaceBetween={10}
-        >
-          <SwiperSlide>
-            <div className="featured-products-category">
-              <div className="featured-products-category-title">save big</div>
+        <div className="swiper-container">
+          <Swiper
+            className="featured-products-hidden"
+            modules={[Navigation, Autoplay, Pagination]}
+            pagination={{ clickable: true }}
+            navigation
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              600: {
+                slidesPerView: 2,
+              },
+            }}
+            spaceBetween={10}
+          >
+            <SwiperSlide className="swiper-slide">
+              <div className="featured-products-category">
+                <div className="featured-products-category-title">save big</div>
 
-              <div className="featured-products-category-body">
-                <FeaturedProduct />
-                <FeaturedProduct />
+                <div className="featured-products-category-body">
+                  <FeaturedProduct />
+                  <FeaturedProduct />
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
 
-          <SwiperSlide>
-            <div className="featured-products-category">
-              <div className="featured-products-category-title">
-                hot products
-              </div>
+            <SwiperSlide>
+              <div className="featured-products-category">
+                <div className="featured-products-category-title">
+                  hot products
+                </div>
 
-              <div className="featured-products-category-body">
-                <FeaturedProduct />
-                <FeaturedProduct />
+                <div className="featured-products-category-body">
+                  <FeaturedProduct />
+                  <FeaturedProduct />
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
+            </SwiperSlide>
 
-          <SwiperSlide>
-            <div className="featured-products-category">
-              <div className="featured-products-category-title">
-                highest rated
-              </div>
+            <SwiperSlide>
+              <div className="featured-products-category">
+                <div className="featured-products-category-title">
+                  highest rated
+                </div>
 
-              <div className="featured-products-category-body">
-                <FeaturedProduct />
-                <FeaturedProduct />
+                <div className="featured-products-category-body">
+                  <FeaturedProduct />
+                  <FeaturedProduct />
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        </Swiper>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </section>
   );

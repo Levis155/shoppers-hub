@@ -31,14 +31,15 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import { FaBagShopping, FaCouch } from "react-icons/fa6";
 import { TbDog } from "react-icons/tb";
 import "./Header.css";
+import { Link } from "react-router-dom"
 
 function Header() {
   return (
     <header className="header">
-      <div className="logo-cont">
+      <Link to={"/"} className="logo-cont">
         <p className="logo">shoppers hub</p>
         <BiSolidShoppingBags />
-      </div>
+      </Link>
       <form action="" className="header-form">
         <input type="text" placeholder="search for products" />
         <button>
@@ -51,78 +52,78 @@ function Header() {
           <GiHamburgerMenu />
           <p className="menu-label">categories</p>
           <div className="categories-menu">
-          <a href="">
+          <Link to={"#"}>
               <IoPhonePortraitOutline />
               <p>phones & telecommunications</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <FaBlender />
               <p>home appliances</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiWatch />
               <p>accessories</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiPearlNecklace />
               <p>jewelry</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <FaHeadphones />
               <p>consumer electronics</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiBedLamp />
               <p>home improvement & lighting</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <PiHairDryerFill />
               <p>hair essentials</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <FaCar />
               <p>automotive & motorcycle</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <FaBagShopping />
               <p>luggages & bags</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiConverseShoe />
               <p>shoes</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <PiShirtFoldedDuotone />
               <p>men's clothing</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiDress />
               <p>women's clothing</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiTennisRacket />
               <p>sports & entertainment</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <MdSmartToy />
               <p>toys & games</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <GiLipstick />
               <p>beauty & health</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <FaHammer />
               <p>tools & industrial</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <FaCouch />
               <p>furniture</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"#"}>
               <TbDog />
               <p>pet supplies</p>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -130,30 +131,30 @@ function Header() {
           <MdAccountCircle />
           <p className="menu-label">account</p>
           <div className="account-menu">
-            <a href="">
+            <Link to={"#"}>
               <CiLogin />
               <p>sign in</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"/customer"}>
               <MdAccountCircle />
               <p>my account</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"/customer/orders"}>
               <FiPackage />
               <p>orders</p>
-            </a>
-            <a href="">
+            </Link>
+            <Link to={"/customer/wishlist"}>
               <FaHeart />
               <p>wishlist</p>
-            </a>
+            </Link>
           </div>
         </div>
 
-        <div className="header-menu">
+        <Link to={"cart"} className="header-menu">
           <HiOutlineShoppingCart />
           <p className="menu-label">cart</p>
           <div className="cart-label">2</div>
-        </div>
+        </Link>
       </div>
     </header>
   );

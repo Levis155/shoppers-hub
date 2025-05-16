@@ -2,7 +2,7 @@ import "./ProductPage.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import Rating from "@mui/material/Rating";
-import { IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline, IoCheckmarkCircle } from "react-icons/io5";
 import { IoIosPricetag, IoIosCalendar } from "react-icons/io";
 import { TbTruckReturn } from "react-icons/tb";
 import { GoShareAndroid } from "react-icons/go";
@@ -12,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const variationImages = [
   "src/assets/jbl-live.png",
@@ -121,7 +122,17 @@ function ProductPage() {
                   <a href="">similar products from jbl</a>
                 </span>
               </p>
-              <p className="product-container-col2-price">ksh 1799</p>
+              <div className="product-container-price-discount-container">
+                <p className="product-container-col2-price">ksh 1799</p>
+
+                <div className="product-container-discount-container">
+                  <p className="product-container-discounted-figure">
+                    ksh 2500
+                  </p>
+                  <p className="product-container-percentage-discount">-32%</p>
+                </div>
+              </div>
+
               <p className="product-container-col2-shipping">
                 + shipping of ksh 90 to Nairobi CBD.
               </p>
@@ -196,6 +207,112 @@ function ProductPage() {
               </div>
             </div>
           </div>
+
+          <div className="product-page-customer-feedback">
+            <p className="customer-feedback-title">customer feedback</p>
+
+            <div className="customer-feedback-body">
+              <div className="customer-feedback-col1">
+                <p className="customer-feedback-col1-title">
+                  verified ratings (12)
+                </p>
+
+                <div className="ratings-summary">
+                  <p className="ratings-average">4.2/5</p>
+                  <div>
+                    <Rating name="read-only" value={4} readOnly />
+                  </div>
+                  <p className="total-ratings">12 verified ratings</p>
+                </div>
+              </div>
+
+              <div className="customer-feedback-col2">
+                <p className="customer-feedback-col2-title">
+                  product reviews (3)
+                </p>
+
+                <div className="customer-feedback-col2-body">
+                  <div className="product-review-card">
+                    <div className="product-review-card-rating">
+                      <Rating name="read-only" value={4} readOnly />
+                    </div>
+
+                    <p className="product-review-card-review-title">
+                      great product
+                    </p>
+
+                    <p className="product-review-card-review-excerpt">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Obcaecati laboriosam beatae magnam amet commodi
+                      architecto.
+                    </p>
+
+                    <div className="product-review-card-bottom">
+                      <p className="product-review-card-review-details">
+                        14 may 2025 by Cynthia
+                      </p>
+
+                      <p className="verified-purchase">
+                        <IoCheckmarkCircle /> verified purchase
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="product-review-card">
+                    <div className="product-review-card-rating">
+                      <Rating name="read-only" value={4} readOnly />
+                    </div>
+
+                    <p className="product-review-card-review-title">
+                      great product
+                    </p>
+
+                    <p className="product-review-card-review-excerpt">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Obcaecati laboriosam beatae magnam amet commodi
+                      architecto.
+                    </p>
+
+                    <div className="product-review-card-bottom">
+                      <p className="product-review-card-review-details">
+                        14 may 2025 by Cynthia
+                      </p>
+
+                      <p className="verified-purchase">
+                        <IoCheckmarkCircle /> verified purchase
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="product-review-card">
+                    <div className="product-review-card-rating">
+                      <Rating name="read-only" value={4} readOnly />
+                    </div>
+
+                    <p className="product-review-card-review-title">
+                      great product
+                    </p>
+
+                    <p className="product-review-card-review-excerpt">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Obcaecati laboriosam beatae magnam amet commodi
+                      architecto.
+                    </p>
+
+                    <div className="product-review-card-bottom">
+                      <p className="product-review-card-review-details">
+                        14 may 2025 by Cynthia
+                      </p>
+
+                      <p className="verified-purchase">
+                        <IoCheckmarkCircle /> verified purchase
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <SimilarProductsSlider />
         </div>
         <div className="product-page-wrapper-col2">
@@ -212,7 +329,7 @@ function ProductPage() {
             <div className="product-page-wrapper-col2-detail">
               <IoIosPricetag />
               <p>
-                <span>shipping fee: </span>KSH 120
+                <span>shipping fee: </span>ksh 120
               </p>
             </div>
             <div className="product-page-wrapper-col2-detail">
@@ -224,7 +341,8 @@ function ProductPage() {
             <div className="product-page-wrapper-col2-detail">
               <TbTruckReturn />{" "}
               <p>
-                <span>returns & refunds policy:</span> <a href="">details</a>
+                <span>returns & refunds policy:</span>{" "}
+                <Link to={"#"}>details</Link>
               </p>
             </div>
             <div className="product-page-wrapper-col2-btn">

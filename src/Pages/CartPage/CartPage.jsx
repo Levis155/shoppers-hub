@@ -2,8 +2,10 @@ import "./CartPage.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function CartPage() {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -23,7 +25,7 @@ function CartPage() {
             <p className="cart-container-col2-subtotal-price">ksh 1998</p>
           </div>
           <div className="cart-container-col2-btn">
-            <button>checkout (ksh 1998)</button>
+            <button onClick={() => {navigate("/checkout")}}>checkout (ksh 1998)</button>
           </div>
         </div>
       </div>

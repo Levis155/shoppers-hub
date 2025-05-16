@@ -3,6 +3,7 @@ import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { IoChevronForwardOutline } from "react-icons/io5";
+import { Link } from "react-router-dom"
 
 function CheckoutPage() {
   return (
@@ -14,17 +15,17 @@ function CheckoutPage() {
           <div className="checkout-page-customer-address">
             <div className="checkout-page-customer-address-title">
               <p>
-                <IoIosCheckmarkCircle /> 1. customer address
+                <IoIosCheckmarkCircle /> 1. customer information
               </p>
-              <a href="">
+              <Link to="/customer/account/edit-account-details">
                 change <IoChevronForwardOutline />
-              </a>
+              </Link>
             </div>
 
             <div className="checkout-page-customer-address-body">
               <p className="checkout-page-customer-name">Levis Mbui</p>
               <p className="checkout-page-customer-details">
-                levismbui@gmail.com | Nyeri - Nyeri Town | +254720875598
+                levismbui@gmail.com | +254720875598
               </p>
             </div>
           </div>
@@ -34,9 +35,6 @@ function CheckoutPage() {
               <p>
                 <IoIosCheckmarkCircle /> 2. delivery details
               </p>
-              <a href="">
-                change <IoChevronForwardOutline />
-              </a>
             </div>
 
             <div className="checkout-page-delivery-details-body">
@@ -47,9 +45,9 @@ function CheckoutPage() {
               <div className="checkout-page-pickup-station">
                 <div className="checkout-page-pickup-station-title">
                   <p>pickup station</p>
-                  <a href="">
+                  <Link to="/customer/account/edit-shipping-address">
                     change <IoChevronForwardOutline />
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="checkout-page-pickup-station-body">
@@ -66,9 +64,9 @@ function CheckoutPage() {
               <div className="checkout-page-shipment">
                 <div className="checkout-page-shipment-title">
                   <p>shipment</p>
-                  <a href="">
+                  <Link to={"/cart"}>
                     modify cart <IoChevronForwardOutline />
-                  </a>
+                  </Link>
                 </div>
 
                 <div className="checkout-page-shipment-body">
@@ -86,9 +84,9 @@ function CheckoutPage() {
               <p>
                 <IoIosCheckmarkCircle /> 3. payment method
               </p>
-              <a href="">
+              <Link to={"#"}>
                 change <IoChevronForwardOutline />
-              </a>
+              </Link>
             </div>
 
             <div className="checkout-page-payment-method-body">

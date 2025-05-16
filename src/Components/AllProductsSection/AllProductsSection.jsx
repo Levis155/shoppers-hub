@@ -3,6 +3,7 @@ import jblImage from "../../assets/jbl-live.png";
 import Rating from "@mui/material/Rating";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function AllProductsSection() {
   return (
@@ -101,14 +102,19 @@ function ProductsGridCard({
   const [wishListBtnClicked, setWishListBtnClicked] = useState(false);
   return (
     <div className="products-grid-card">
-      <div className="products-grid-card-top">
+      <Link to={"/product"} className="products-grid-card-top">
         <div className="products-grid-card-img">
           <img src={productImage} alt="product image" />
         </div>
-      </div>
+      </Link>
       <div className="products-grid-card-properties">
-        <p className="products-grid-card-details">{productDetails}</p>
+        <Link to={"/product"} className="products-grid-card-details">{productDetails}</Link>
         <p className="products-grid-card-price">ksh {productPrice}</p>
+
+        <div className="products-grid-card-discount">
+          <p className="products-grid-card-discounted-figure">ksh 2500</p>
+          <p className="products-grid-card-percentage-discount">-22%</p>
+        </div>
         <div className="products-grid-card-rating">
           <Rating name="read-only" value={productRating} readOnly />
         </div>
