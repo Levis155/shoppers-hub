@@ -1,11 +1,11 @@
-import "./AllProductsSection.css";
+import "./ProductsGrid.css";
 import jblImage from "../../assets/jbl-live.png";
 import Rating from "@mui/material/Rating";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function AllProductsSection() {
+function ProductsGrid() {
   return (
     <section className="all-products-section">
       <p className="section-title">more to love</p>
@@ -159,4 +159,4 @@ function ProductsGridCard({
   );
 }
 
-export default AllProductsSection;
+export default ProductsGrid;

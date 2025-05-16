@@ -1,11 +1,11 @@
-import "./HeroSection.css";
+import "./Hero.css";
 import shoeImg from "../../assets/shoe.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
-function HeroSection() {
+function Hero() {
   return (
     <section className="hero-section">
       <div className="hero-wrapper">
@@ -142,4 +142,4 @@ function FeaturedProduct() {
   );
 }
 
-export default HeroSection;
+export default Hero;

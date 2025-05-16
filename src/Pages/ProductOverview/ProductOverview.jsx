@@ -1,4 +1,4 @@
-import "./ProductPage.css";
+import "./ProductOverview.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import Rating from "@mui/material/Rating";
@@ -95,7 +95,7 @@ const similarProductsDetails = [
   },
 ];
 
-function ProductPage() {
+function ProductOverview() {
   const [variationImage, setVariationImage] = useState(variationImages[0]);
   let [cartQuantity, setCartQuantity] = useState(0);
 
@@ -456,4 +456,4 @@ function SimilarProductsSlider() {
   );
 }
 
-export default ProductPage;
+export default ProductOverview;

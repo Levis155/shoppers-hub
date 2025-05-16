@@ -1,4 +1,4 @@
-import "./CustomerPage.css";
+import "./Customer.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import { NavLink, Outlet } from "react-router-dom";
@@ -6,7 +6,7 @@ import { FaRegUser, FaRegHeart } from "react-icons/fa";
 import { LuPackage } from "react-icons/lu";
 import { MdOutlineRateReview } from "react-icons/md";
 
-function CustomerPage() {
+function Customer() {
   return (
     <>
       <Header />
@@ -55,4 +55,4 @@ function CustomerPage() {
   );
 }
 
-export default CustomerPage;
+export default Customer;

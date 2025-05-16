@@ -1,8 +1,8 @@
-import "./PendingReviews.css";
+import "./ProductsToReview.css";
 import headphonesImg from "../../assets/jbl-live.png";
 import { Link, useLocation, Outlet } from "react-router-dom";
 
-function PendingReviews() {
+function ProductsToReview() {
   const location = useLocation();
   const inRateAndReviewSection = location.pathname.endsWith('/rate-and-review');
 
@@ -46,4 +46,4 @@ function ProductToReview() {
   );
 }
 
-export default PendingReviews;
+export default ProductsToReview;

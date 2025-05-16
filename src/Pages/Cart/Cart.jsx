@@ -1,10 +1,10 @@
-import "./CartPage.css";
+import "./Cart.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-function CartPage() {
+function Cart() {
   const navigate = useNavigate();
   return (
     <>
@@ -73,4 +73,4 @@ function CartCard() {
   );
 }
 
-export default CartPage;
+export default Cart;

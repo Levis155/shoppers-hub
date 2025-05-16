@@ -1,11 +1,11 @@
-import "./CheckoutPage.css";
+import "./Checkout.css";
 import Header from "../../Components/Header/Header";
 import MobileHeader from "../../Components/MobileHeader/MobileHeader";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { IoChevronForwardOutline } from "react-icons/io5";
 import { Link } from "react-router-dom"
 
-function CheckoutPage() {
+function Checkout() {
   return (
     <>
       <Header />
@@ -150,4 +150,4 @@ function ShipmentCard() {
   );
 }
 
-export default CheckoutPage;
+export default Checkout;

@@ -1,4 +1,4 @@
-import "./RateAndReviewForm.css";
+import "./RateAndReview.css";
 import headphonesImg from "../../assets/jbl-live.png";
 import { useState } from "react";
 import {
@@ -6,7 +6,7 @@ import {
   Rating,
 } from "@mui/material";
 
-function RateAndReviewForm() {
+function RateAndReview() {
   const [value, setValue] = useState(0);
 
   return (
@@ -101,4 +101,4 @@ function RateAndReviewForm() {
   );
 }
 
-export default RateAndReviewForm;
+export default RateAndReview;
