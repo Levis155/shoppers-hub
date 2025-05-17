@@ -1,4 +1,5 @@
 import Register from "./Pages/Register/Register";
+import {Login, CustomerLogin, AdminLogin} from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
 import ProductOverview from "./Pages/ProductOverview/ProductOverview";
 import Cart from "./Pages/Cart/Cart";
@@ -19,6 +20,15 @@ function App() {
     <>
       <Routes>
         <Route path="/register" element={<Register />} />
+        
+        <Route path="/login" element={<Login />}>
+          <Route index element ={<Navigate to="customer" replace />} />
+
+          <Route path="customer" element={<CustomerLogin />} />
+          <Route path="admin" element={<AdminLogin />} />
+          <Route />
+        </Route>
+        
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<ProductOverview />} />
         <Route path="/cart" element={<Cart />} />

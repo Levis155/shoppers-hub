@@ -1,10 +1,10 @@
-.registration-page-wrapper {
+.login-page-wrapper {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.registration-page-wrapper form {
+.login-page-wrapper form {
   background-color: var(--white-color);
   width: 60%;
   display: flex;
@@ -14,31 +14,50 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 @media screen and (max-width: 62.5em) {
-    .registration-page-wrapper form{
+    .login-page-wrapper form{
         width: 80%;
     }
 }
 @media screen and (max-width: 37.5em) {
-    .registration-page-wrapper form{
+    .login-page-wrapper form{
         width: 90%;
     }
 }
-.registration-page-logo{
+.login-page-logo{
     font-size: 4rem;
     margin-bottom: .5rem;
 }
-.registration-form-title{
+.login-form-title{
     font-size: 2rem;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
-.registration-form-body {
+.login-nav{
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+.login-nav a{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color:rgb(187, 185, 185);
+}
+@media screen and (max-width: 26.25em) {
+    .login-nav a{
+        font-size: 1.65rem;
+    }
+}
+.login-active-link{
+    color: var(--black-color) !important;
+    border-bottom: 3px solid var(--primary-color);
+}
+.login-form-body {
     width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.signup-btn{
+.login-btn{
     padding-block: 1.2rem;
     background-color: var(--primary-color);
     color: var(--white-color);
@@ -46,10 +65,10 @@
     cursor: pointer;
     text-transform: capitalize;
 }
-.login-text{
+.register-text{
     font-size: 1.4rem;
     margin-top: .5rem;
 }
-.login-text a {
+.register-text a {
     color: var(--primary-color);
 }
