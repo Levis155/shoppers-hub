@@ -1,11 +1,11 @@
 import "./CategoriesSelect.css"
-import SliderComponent from "../Slider/Slider"
+import CategoriesSlider from "../CategoriesSlider/CategoriesSlider";
 
 function CategoriesSelect() {
   return (
     <section className="categories-section">
       <p className="section-title">shop by category</p>
-      <SliderComponent />
+      <CategoriesSlider />
     </section>
   )
 }

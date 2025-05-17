@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-import "./Slider.css";
+import "./CategoriesSlider.css";
 import phonesAndTelecommunicationsSrc from  "../../assets/phones-and-telecommunications-removebg-preview.png";
 import mensFashionSrc from "../../assets/mens-fashion.png";
 import homeAppliancesSrc from "../../assets/home-appliances.png"
@@ -20,7 +20,7 @@ import toolsAndIndustrySrc from "../../assets/tools-and-industry.png";
 import furnitureSrc from "../../assets/furniture.png";
 import petSuppliesSrc from "../../assets/pet-supplies.png";
 
-const SliderComponent = () => {
+function CategoriesSlider () {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3;
 
@@ -104,4 +104,4 @@ const SliderComponent = () => {
   );
 };
 
-export default SliderComponent;
+export default CategoriesSlider;

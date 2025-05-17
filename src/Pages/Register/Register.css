@@ -1,0 +1,55 @@
+.registration-page-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.registration-page-wrapper form {
+  background-color: var(--white-color);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+@media screen and (max-width: 62.5em) {
+    .registration-page-wrapper form{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 37.5em) {
+    .registration-page-wrapper form{
+        width: 90%;
+    }
+}
+.registration-page-logo{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.registration-form-title{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.registration-form-body {
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.signup-btn{
+    padding-block: 1.2rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border:none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.login-text{
+    font-size: 1.4rem;
+    margin-top: .5rem;
+}
+.login-text a {
+    color: var(--primary-color);
+}

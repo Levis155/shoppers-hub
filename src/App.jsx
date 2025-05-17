@@ -1,3 +1,4 @@
+import Register from "./Pages/Register/Register";
 import Home from "./Pages/Home/Home";
 import ProductOverview from "./Pages/ProductOverview/ProductOverview";
 import Cart from "./Pages/Cart/Cart";
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/register" element={<Register />} />
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<ProductOverview />} />
         <Route path="/cart" element={<Cart />} />
