@@ -1,6 +1,7 @@
 import Register from "./Pages/Register/Register";
 import {Login, CustomerLogin, AdminLogin} from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
+import QueriedProducts from "./Pages/QueriedProducts/QueriedProducts";
 import ProductOverview from "./Pages/ProductOverview/ProductOverview";
 import Cart from "./Pages/Cart/Cart";
 import Checkout from "./Pages/Checkout/Checkout";
@@ -30,6 +31,7 @@ function App() {
         </Route>
         
         <Route path="/" element={<Home />} />
+        <Route path="/queried-products" element={<QueriedProducts />} />
         <Route path="/product" element={<ProductOverview />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />

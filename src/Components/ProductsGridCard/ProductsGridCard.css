@@ -1,0 +1,108 @@
+.products-grid-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightgray;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.products-grid-card-top {
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  /* background-color: var(--light-gray-variant1); */
+}
+.products-grid-card-img {
+  height: 20rem;
+  width: 15rem;
+}
+.products-grid-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.products-grid-card-properties {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.products-grid-card-details {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  box-orient: vertical;
+  overflow: hidden;
+  color: var(--black-color);
+}
+.products-grid-card-details:hover {
+  transition: all, 0.4s;
+  color: var(--primary-color);
+}
+.products-grid-card-price {
+  font-weight: 600;
+  font-size: 2rem;
+  color: var(--black-color);
+}
+.products-grid-card-discount {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.products-grid-card-discounted-figure {
+  font-size: 1.3rem;
+  color: gray;
+  text-decoration: line-through;
+}
+.products-grid-card-percentage-discount {
+  padding: 0.1rem;
+  font-size: 1.4rem;
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+}
+.products-grid-card-rating svg {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+.products-grid-card-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.products-grid-card-add-btn {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  cursor: pointer;
+}
+.products-grid-card-wish-btn {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-gray-variant1);
+  color: var(--primary-color);
+  cursor: pointer;
+}
+.cart-control {
+  display: flex;
+}
+.cart-control button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+.cart-quantity {
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
