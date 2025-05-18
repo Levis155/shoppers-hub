@@ -14,6 +14,7 @@ import EditShippingAddress from "./Pages/EditShippingAddress/EditShippingAdress"
 import OrderedProducts from "./Pages/OrderedProducts/OrderedProducts";
 import ProductsToReview from "./Pages/ProductsToReview/ProductsToReview";
 import RateAndReview from "./Pages/RateAndReview/RateAndReview";
+import Success from "./Pages/Success/Success";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/product" element={<ProductOverview />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/success" element={<Success />} />
         <Route path="/customer" element={<Customer />}>
           <Route index element={<Navigate to="account" replace />} />
 

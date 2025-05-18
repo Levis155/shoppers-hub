@@ -1,0 +1,73 @@
+.success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.success-card {
+  background-color: var(--white-color);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 4rem;
+}
+@media screen and (max-width: 62.5em) {
+  .success-card {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .success-card {
+    width: 90%;
+  }
+}
+.success-card svg {
+  font-size: 8rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+}
+.success-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+@media screen and (max-width: 25em) {
+  .success-title {
+    font-size: 1.9rem;
+  }
+}
+.success-excerpt {
+  text-align: center;
+  color: gray;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+.success-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.success-links a {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 25em) {
+  .success-links a {
+    padding-inline: 0.4rem;
+    font-size: 1.2rem;
+  }
+}
+.view-orders-link {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid var(--primary-color);
+}
+.continue-shopping-link {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
