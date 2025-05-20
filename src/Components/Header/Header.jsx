@@ -131,26 +131,26 @@ function Header() {
           <MdAccountCircle />
           <p className="menu-label">account</p>
           <div className="account-menu">
-            <Link to={"#"}>
+            <Link to="/login">
               <CiLogin />
               <p>sign in</p>
             </Link>
-            <Link to={"/customer"}>
+            <Link to="/customer">
               <MdAccountCircle />
               <p>my account</p>
             </Link>
-            <Link to={"/customer/orders"}>
+            <Link to="/customer/orders">
               <FiPackage />
               <p>orders</p>
             </Link>
-            <Link to={"/customer/wishlist"}>
+            <Link to="/customer/wishlist">
               <FaHeart />
               <p>wishlist</p>
             </Link>
           </div>
         </div>
 
-        <Link to={"cart"} className="header-menu">
+        <Link to="/cart" className="header-menu">
           <HiOutlineShoppingCart />
           <p className="menu-label">cart</p>
           <div className="cart-label">2</div>

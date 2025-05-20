@@ -28,7 +28,6 @@ function App() {
 
           <Route path="customer" element={<CustomerLogin />} />
           <Route path="admin" element={<AdminLogin />} />
-          <Route />
         </Route>
 
         <Route path="/" element={<Home />} />
