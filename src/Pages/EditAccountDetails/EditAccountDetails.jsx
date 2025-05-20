@@ -1,6 +1,6 @@
 import "./EditAccountDetails.css";
 import { TextField } from "@mui/material";
-import formControlStyle from "../../../data/formControlStyle.js";
+import formControlStyle from "../../data/formControlStyle.js";
 
 function EditAccountDetails() {
   return (

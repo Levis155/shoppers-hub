@@ -5,7 +5,7 @@ import {
   TextField,
   Rating,
 } from "@mui/material";
-import formControlStyle from "../../../data/formControlStyle";
+import formControlStyle from "../../data/formControlStyle";
 
 function RateAndReview() {
   const [value, setValue] = useState(0);

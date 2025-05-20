@@ -1,9 +1,9 @@
 import "./EditShippingAddress.css";
-import regionTownMap from "../../../data/regionTownMap";
+import regionTownMap from "../../data/regionTownMap";
 import { generatePickupStations } from "../../../utils/generatePickupStations";
 import { useState } from "react";
 import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
-import formControlStyle from "../../../data/formControlStyle";
+import formControlStyle from "../../data/formControlStyle";
 
 function EditShippingAddress() {
   const [region, setRegion] = useState("Nairobi");

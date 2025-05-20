@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import formControlStyle from "../../../data/formControlStyle";
+import formControlStyle from "../../data/formControlStyle";
 
 export function Login() {
   return (

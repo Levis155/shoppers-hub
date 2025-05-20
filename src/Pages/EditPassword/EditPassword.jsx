@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-import formControlStyle from "../../../data/formControlStyle";
+import formControlStyle from "../../data/formControlStyle";
 
 function EditPassword() {
   const [showPassword, setShowPassword] = useState(false);
