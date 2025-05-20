@@ -33,8 +33,7 @@ function OrderedProduct() {
           delivered on: 14 May 2025
         </p>
         <p className="ordered-product-pickup-station">
-          pickup station: Skyveshop Nyeri Station - Hamwa building Gakere rd
-          Opposite Naivas Smkt, Next to hass petrol station
+          pickup station: Skyveshop Nyeri Station 
         </p>
       </div>
     </div>

@@ -9,18 +9,7 @@ import {
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-
-const formControlStyle = {
-  "& .MuiInputBase-root": {
-    fontSize: "1.4rem",
-  },
-  "& .MuiInputLabel-root": {
-    fontSize: "1.4rem",
-  },
-  "& .MuiInputLabel-shrink": {
-    fontSize: "1.3rem",
-  },
-};
+import formControlStyle from "../../../data/formControlStyle";
 
 function EditPassword() {
   const [showPassword, setShowPassword] = useState(false);
@@ -62,7 +51,7 @@ function EditPassword() {
                 </IconButton>
               </InputAdornment>
             }
-            label="Password"
+            label="Old Password"
           />
         </FormControl>
 
@@ -88,7 +77,7 @@ function EditPassword() {
                 </IconButton>
               </InputAdornment>
             }
-            label="Password"
+            label="New Password"
           />
         </FormControl>
 
@@ -114,7 +103,7 @@ function EditPassword() {
                 </IconButton>
               </InputAdornment>
             }
-            label="Password"
+            label="Confirm Password"
           />
         </FormControl>
 

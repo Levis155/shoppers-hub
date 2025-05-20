@@ -1,5 +1,5 @@
 import Register from "./Pages/Register/Register";
-import {Login, CustomerLogin, AdminLogin} from "./Pages/Login/Login";
+import { Login, CustomerLogin, AdminLogin } from "./Pages/Login/Login";
 import Home from "./Pages/Home/Home";
 import QueriedProducts from "./Pages/QueriedProducts/QueriedProducts";
 import ProductOverview from "./Pages/ProductOverview/ProductOverview";
@@ -22,15 +22,15 @@ function App() {
     <>
       <Routes>
         <Route path="/register" element={<Register />} />
-        
+
         <Route path="/login" element={<Login />}>
-          <Route index element ={<Navigate to="customer" replace />} />
+          <Route index element={<Navigate to="customer" replace />} />
 
           <Route path="customer" element={<CustomerLogin />} />
           <Route path="admin" element={<AdminLogin />} />
           <Route />
         </Route>
-        
+
         <Route path="/" element={<Home />} />
         <Route path="/queried-products" element={<QueriedProducts />} />
         <Route path="/product" element={<ProductOverview />} />

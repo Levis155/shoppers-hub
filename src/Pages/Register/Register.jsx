@@ -12,26 +12,7 @@ import {
 } from "@mui/material";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
-
-const formControlStyle = {
-  "& .MuiInputBase-root": {
-    fontSize: "1.4rem",
-    fontFamily: "inherit",
-  },
-  "& .MuiInputLabel-root": {
-    fontSize: "1.4rem",
-    fontFamily: "inherit",
-    color: "rgba(0, 0, 0, 0.6)", 
-    "&.Mui-focused": {
-      color: "var(--primary-color)", 
-    },
-  },
-  "& .MuiOutlinedInput-root": {
-    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-      borderColor: "var(--primary-color)",
-    },
-  },
-};
+import formControlStyle from "../../../data/formControlStyle";
 
 function Register() {
   const [showPassword, setShowPassword] = useState(false);

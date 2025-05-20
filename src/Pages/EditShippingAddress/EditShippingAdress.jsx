@@ -3,18 +3,7 @@ import regionTownMap from "../../../data/regionTownMap";
 import { generatePickupStations } from "../../../utils/generatePickupStations";
 import { useState } from "react";
 import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
-
-const formControlStyle = {
-  "& .MuiInputBase-root": {
-    fontSize: "1.4rem",
-  },
-  "& .MuiInputLabel-root": {
-    fontSize: "1.4rem",
-  },
-  "& .MuiInputLabel-shrink": {
-    fontSize: "1.3rem",
-  },
-};
+import formControlStyle from "../../../data/formControlStyle";
 
 function EditShippingAddress() {
   const [region, setRegion] = useState("Nairobi");

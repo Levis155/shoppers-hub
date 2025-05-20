@@ -5,6 +5,7 @@ import {
   TextField,
   Rating,
 } from "@mui/material";
+import formControlStyle from "../../../data/formControlStyle";
 
 function RateAndReview() {
   const [value, setValue] = useState(0);
@@ -51,28 +52,14 @@ function RateAndReview() {
                 id="outlined-basic-1"
                 label="Review Title"
                 variant="outlined"
-                sx={{
-                  "& .MuiInputBase-input": {
-                    fontSize: "1.6rem",
-                  },
-                  "& .MuiInputLabel-root": {
-                    fontSize: "1.2rem",
-                  },
-                }}
+                sx={formControlStyle}
               />
 
               <TextField
                 id="outlined-basic-1"
                 label="Your Name"
                 variant="outlined"
-                sx={{
-                  "& .MuiInputBase-input": {
-                    fontSize: "1.6rem",
-                  },
-                  "& .MuiInputLabel-root": {
-                    fontSize: "1.2rem",
-                  },
-                }}
+                sx={formControlStyle}
               />
             </div>
 
@@ -83,14 +70,7 @@ function RateAndReview() {
                 multiline
                 rows={7}
                 // defaultValue="Default Value"
-                sx={{
-                  "& .MuiInputBase-input": {
-                    fontSize: "1.6rem",
-                  },
-                  "& .MuiInputLabel-root": {
-                    fontSize: "1.2rem",
-                  },
-                }}
+                sx={formControlStyle}
               />
             </div>
           </div>
