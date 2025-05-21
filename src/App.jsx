@@ -15,6 +15,13 @@ import OrderedProducts from "./Pages/OrderedProducts/OrderedProducts";
 import ProductsToReview from "./Pages/ProductsToReview/ProductsToReview";
 import RateAndReview from "./Pages/RateAndReview/RateAndReview";
 import Success from "./Pages/Success/Success";
+import {
+  Admin,
+  Dashboard,
+  Products,
+  Customers,
+  Sales,
+} from "./Pages/Admin/Admin";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -58,6 +65,15 @@ function App() {
           </Route>
 
           <Route path="wishlist" element={<Wishlist />} />
+        </Route>
+
+        <Route path="/admin" element={<Admin />}>
+          <Route index element={<Navigate to="dashboard" replace />} />
+
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="products" element={<Products />} />
+          <Route path="customers" element={<Customers />} />
+          <Route path="sales" element={<Sales />} />
         </Route>
       </Routes>
     </>

@@ -1,0 +1,94 @@
+.admin-page{
+    display: flex;
+    min-height: 100vh;
+}
+.side-bar{
+    background-color: rgb(9, 19, 29);
+    width: 20%;
+    padding: 2rem 1rem;
+}
+.logo-logout-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+.admin-logo{
+    color: var(--white-color);
+    font-size: 2.2rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-transform: capitalize;
+    font-family: "Lobster", sans-serif;
+}
+.admin-logout-btn{
+    background-color: transparent;
+    border: none;
+    color: var(--white-color);
+    font-size: 2.2rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+.admin-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.admin-nav a{
+    color: gray;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    padding: .8rem .5rem;
+}
+.admin-navlink-active{
+    background-color: rgb(23, 33, 43) !important;
+    color: var(--white-color) !important;
+}
+.admin-body{
+    background-color: var(--white-color);
+    width: 80%;
+    padding-inline: 2rem;
+    padding-top: 2rem;
+}
+.admin-body-title-cont{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+.admin-body-title{
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.dashboard-body{
+    display: flex;
+    gap: 10rem;
+}
+.dashboard-card{
+    width: 20%;
+    padding: 1rem;
+    border-radius: 1rem;
+    /* background-color: rgb(241, 238, 238); */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+.dashboard-card-title{
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.dashboard-card-sub-stat{
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    margin-bottom: 1.8rem;
+}
+.dashboard-card-stat{
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 600;
+}
