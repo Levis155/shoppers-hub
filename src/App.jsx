@@ -15,13 +15,11 @@ import OrderedProducts from "./Pages/OrderedProducts/OrderedProducts";
 import ProductsToReview from "./Pages/ProductsToReview/ProductsToReview";
 import RateAndReview from "./Pages/RateAndReview/RateAndReview";
 import Success from "./Pages/Success/Success";
-import {
-  Admin,
-  Dashboard,
-  Products,
-  Customers,
-  Sales,
-} from "./Pages/Admin/Admin";
+import { Admin } from "./Pages/Admin/Admin";
+import AdminDashboard from "./Pages/AdminDashboard/AdminDashboard";
+import AdminProducts from "./Pages/AdminProducts/AdminProducts";
+import AdminCustomers from "./Pages/AdminCustomers/AdminCustomers";
+import AdminSales from "./Pages/AdminSales/AdminSales";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
@@ -70,10 +68,10 @@ function App() {
         <Route path="/admin" element={<Admin />}>
           <Route index element={<Navigate to="dashboard" replace />} />
 
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="products" element={<Products />} />
-          <Route path="customers" element={<Customers />} />
-          <Route path="sales" element={<Sales />} />
+          <Route path="dashboard" element={<AdminDashboard />} />
+          <Route path="products" element={<AdminProducts />} />
+          <Route path="customers" element={<AdminCustomers />} />
+          <Route path="sales" element={<AdminSales />} />
         </Route>
       </Routes>
     </>
